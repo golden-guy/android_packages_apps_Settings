@@ -382,6 +382,12 @@
     <string name="crypt_keeper_data_corrupt_summary" product="tablet" msgid="3775740783651700375">"Das von Ihnen eingegebene Passwort ist korrekt, aber Ihre Daten sind beschädigt. \n\nDamit Sie Ihr Tablet weiterhin verwenden können, müssen Sie es auf die Werkseinstellungen zurücksetzen. Nach dem Zurücksetzen auf die Werkseinstellungen können Sie beim Einrichten Ihres Tablets die Daten wiederherstellen, die Sie in Ihrem Google-Konto gesichert hatten."</string>
     <string name="crypt_keeper_data_corrupt_summary" product="default" msgid="6898436151871328007">"Das von Ihnen eingegebene Passwort ist korrekt, aber Ihre Daten sind beschädigt. \n\nDamit Sie Ihr Telefon weiterhin verwenden können, müssen Sie es auf die Werkseinstellungen zurücksetzen. Nach dem Zurücksetzen auf die Werkseinstellungen können Sie beim Einrichten Ihres Telefons die Daten wiederherstellen, die Sie in Ihrem Google-Konto gesichert hatten."</string>
     <string name="crypt_keeper_switch_input_method" msgid="4168332125223483198">"Eingabemethode wechseln"</string>
+    <!--  Title for PreferenceScreen to change encryption password [CHAR LIMIT=22]  -->
+    <string name="crypt_keeper_change_password_title">Passwort ändern</string>
+    <!--  Summary for PreferenceScreen to change encryption password [CHAR LIMIT=45]  -->
+    <string name="crypt_keeper_change_password_summary">Passwort für die Verschlüsselung ändern</string>
+    <!-- Header on first screen of choose encryption password [CHAR LIMIT=30] -->
+    <string name="crypt_keeper_choose_your_password_header">Passwort eingeben</string>
     <string name="lock_settings_picker_title" msgid="1095755849152582712">"Displaysperre wählen"</string>
     <string name="backup_lock_settings_picker_title" msgid="8530380598637963916">"Ersatzsperre wählen"</string>
     <string name="unlock_set_unlock_launch_picker_title" msgid="2084576942666016993">"Displaysperre"</string>
