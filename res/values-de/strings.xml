@@ -388,6 +388,10 @@
     <string name="crypt_keeper_change_password_summary">Passwort für die Verschlüsselung ändern</string>
     <!-- Header on first screen of choose encryption password [CHAR LIMIT=30] -->
     <string name="crypt_keeper_choose_your_password_header">Passwort eingeben</string>
+    <!--  Title for PreferenceScreen to replace encryption password [CHAR LIMIT=22]  -->
+    <string name="crypt_keeper_replace_password_title">Passwort ersetzen</string>
+    <!--  Summary for PreferenceScreen to replace encryption password [CHAR LIMIT=45]  -->
+    <string name="crypt_keeper_replace_password_summary">Separates Passwort entfernen</string>
     <string name="lock_settings_picker_title" msgid="1095755849152582712">"Displaysperre wählen"</string>
     <string name="backup_lock_settings_picker_title" msgid="8530380598637963916">"Ersatzsperre wählen"</string>
     <string name="unlock_set_unlock_launch_picker_title" msgid="2084576942666016993">"Displaysperre"</string>
