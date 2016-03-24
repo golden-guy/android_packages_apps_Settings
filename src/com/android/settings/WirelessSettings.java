@@ -287,11 +287,15 @@ public class WirelessSettings extends SettingsPreferenceFragment
             initSmsApplicationSetting();
         }
 
+        /*
         if (ImsManager.isWfcEnabledByPlatform(activity)) {
             mButtonWfc = (PreferenceScreen) findPreference(KEY_WFC_SETTINGS);
         } else {
+        */
             removePreference(KEY_WFC_SETTINGS);
+        /*
         }
+        */
 
         // Remove NSD checkbox by default
         getPreferenceScreen().removePreference(nsd);
@@ -436,10 +440,12 @@ public class WirelessSettings extends SettingsPreferenceFragment
         }
 
         final Context context = getActivity();
+        /*
         if (ImsManager.isWfcEnabledByPlatform(context)) {
             mButtonWfc.setSummary(WifiCallingSettings.getWfcModeSummary(
                     context, ImsManager.getWfcMode(context)));
         }
+        */
     }
 
     @Override

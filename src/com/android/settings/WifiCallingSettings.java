@@ -125,6 +125,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         @Override
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
+            /*
             if (action.equals(ImsManager.ACTION_IMS_REGISTRATION_ERROR)) {
                 // If this fragment is active then we are immediately
                 // showing alert on screen. There is no need to add
@@ -139,6 +140,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
 
                 showAlert(intent);
             }
+            */
         }
     };
 
@@ -151,8 +153,10 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         mButtonWfcMode = (ListPreference) findPreference(BUTTON_WFC_MODE);
         mButtonWfcMode.setOnPreferenceChangeListener(this);
 
+        /*
         mIntentFilter = new IntentFilter();
         mIntentFilter.addAction(ImsManager.ACTION_IMS_REGISTRATION_ERROR);
+        */
     }
 
     @Override
@@ -161,6 +165,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
 
         final Context context = getActivity();
 
+        /*
         if (ImsManager.isWfcEnabledByPlatform(context)) {
             TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
             tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_CALL_STATE);
@@ -182,6 +187,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
         if (intent.getBooleanExtra(ImsPhone.EXTRA_KEY_ALERT_SHOW, false)) {
             showAlert(intent);
         }
+        */
     }
 
     @Override
@@ -190,12 +196,14 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
 
         final Context context = getActivity();
 
+        /*
         if (ImsManager.isWfcEnabledByPlatform(getActivity())) {
             TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
             tm.listen(mPhoneStateListener, PhoneStateListener.LISTEN_NONE);
 
             mSwitchBar.removeOnSwitchChangeListener(this);
         }
+        */
 
         context.unregisterReceiver(mIntentReceiver);
     }
@@ -207,10 +215,11 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
     public void onSwitchChanged(Switch switchView, boolean isChecked) {
         final Context context = getActivity();
 
-        ImsManager.setWfcSetting(context, isChecked);
+        //ImsManager.setWfcSetting(context, isChecked);
 
-        int wfcMode = ImsManager.getWfcMode(context);
-        updateButtonWfcMode(context, isChecked, wfcMode);
+        //int wfcMode = ImsManager.getWfcMode(context);
+        //updateButtonWfcMode(context, isChecked, wfcMode);
+        updateButtonWfcMode(context, isChecked, 0 /* wfcMode */);
     }
 
     private void updateButtonWfcMode(Context context, boolean wfcEnabled, int wfcMode) {
@@ -228,6 +237,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         final Context context = getActivity();
+        /*
         if (preference == mButtonWfcMode) {
             mButtonWfcMode.setValue((String) newValue);
             int buttonMode = Integer.valueOf((String) newValue);
@@ -237,11 +247,13 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
                 mButtonWfcMode.setSummary(getWfcModeSummary(context, buttonMode));
             }
         }
+        */
         return true;
     }
 
     static int getWfcModeSummary(Context context, int wfcMode) {
         int resId = com.android.internal.R.string.wifi_calling_off_summary;
+        /*
         if (ImsManager.isWfcEnabledByUser(context)) {
             switch (wfcMode) {
                 case ImsConfig.WfcModeFeatureValueConstants.WIFI_ONLY:
@@ -257,6 +269,7 @@ public class WifiCallingSettings extends SettingsPreferenceFragment
                     Log.e(TAG, "Unexpected WFC mode value: " + wfcMode);
             }
         }
+        */
         return resId;
     }
 }
