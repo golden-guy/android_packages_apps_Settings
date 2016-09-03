@@ -238,7 +238,9 @@ public class SecuritySettings extends SettingsPreferenceFragment
             if (LockPatternUtils.isDeviceEncryptionEnabled()) {
                 // The device is currently encrypted.
                 addPreferencesFromResource(R.xml.security_settings_encrypted);
-                if (!mLockPatternUtils.isSeparateEncryptionPasswordEnabled()) {
+                if (!mLockPatternUtils.isSeparateEncryptionPasswordEnabled() ||
+                        (!mLockPatternUtils.isLockPasswordEnabled() &&
+                        !mLockPatternUtils.isLockPatternEnabled())) {
                     PreferenceGroup encryptionCategory =
                             (PreferenceGroup) root.findPreference(KEY_ENCRYPTION_CATEGORY);
                     if (encryptionCategory != null) {
